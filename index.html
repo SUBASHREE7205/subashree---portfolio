@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subashree R — Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1724;
+      --muted:#9aa4b2;
+      --accent1:linear-gradient(135deg,#7b61ff 0%, #00d4ff 100%);
+      --accent2:linear-gradient(135deg,#ff6bd6 0%, #5be3ff 100%);
+      --glass: rgba(255,255,255,0.03);
+      --radius:16px;
+      font-family: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth;}
+    html,body{height:100%;margin:0;background:var(--bg);color:#e6eef6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* NAV */
+    header{position:sticky;top:12px;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter:blur(6px);border-radius:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:var(--accent1);display:grid;place-items:center;font-weight:700;color:#071024}
+    nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    nav a{padding:8px 12px;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,0.02)}
+
+    .social-links{display:flex;gap:12px;align-items:center}
+    .social-links a{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.05);transition:all 0.3s ease}
+    .social-links a:hover{background:var(--accent2);color:#071024}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:48px 0}
+    .hero-left h1{font-size:38px;margin:0 0 8px}
+    .title-muted{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent1);color:#071024}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+    .hero-right{display:grid;place-items:center}
+    .profile{width:260px;height:260px;border-radius:18px;background:var(--glass);display:grid;place-items:center;overflow:hidden;position:relative}
+    .profile img{width:100%;height:100%;object-fit:cover}
+
+    /* CARDS */
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:14px}
+
+    /* PROJECTS */
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .proj{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);min-height:120px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:transform 0.3s ease, background 0.3s ease}
+    .proj h4{margin:0 0 8px}
+    .proj p{color:var(--muted);font-size:14px;margin:0}
+    .proj:hover{transform:translateY(-6px);background:var(--accent2)}
+
+    /* CONTACT */
+    form{display:grid;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:10px;color:inherit}
+    .socials{display:flex;gap:12px;align-items:center}
+
+    footer{margin-top:36px;color:var(--muted);text-align:center;padding:28px 0}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.projects-grid,.grid{grid-template-columns:repeat(2,1fr)}.profile{width:220px;height:220px}}
+    @media (max-width:600px){.projects-grid,.grid{grid-template-columns:1fr}.nav ul{display:none}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav card">
+        <div class="brand">
+          <div class="logo">SR</div>
+          <div>
+            <div style="font-weight:700">Subashree R</div>
+            <div style="font-size:12px;color:var(--muted)">Aspiring Web Developer | Python Enthusiast</div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/subashree-raman-2653b92a2/" target="_blank">in</a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank">GH</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <h1>Hi, I’m <span style="background:var(--accent2);-webkit-background-clip:text;background-clip:text;color:transparent">Subashree</span></h1>
+          <div class="title-muted">Final-year B.E. CSE student at Chettinad College — Building responsive web experiences and creative interfaces.</div>
+          <p style="color:var(--muted);max-width:70%">I build modern, accessible, and mobile-first websites. I enjoy blending creative artwork with clean UI to deliver delightful user experiences.</p>
+          <div class="cta" style="margin-top:18px">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="profile card">
+            <img src="./img./suba.jpg" alt="Profile picture">
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="margin-top:28px">
+        <div class="card">
+          <h2>About Me</h2>
+          <p style="color:var(--muted)">I’m Subashree, currently pursuing my final year B.E. CSE at Chettinad College of Engineering and Technology (Graduating in 2026). I’m passionate about frontend web design, artwork, and creating innovative solutions that make a real impact. Internship experience includes Python development at Cybernaut and frontend development at CodeAlpha.</p>
+
+          <div style="display:flex;gap:18px;margin-top:18px;flex-wrap:wrap">
+            <div style="flex:1;min-width:260px" class="card">
+              <h3>Skills</h3>
+              <div class="skill-list">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">Java</span>
+                <span class="chip">Python</span>
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Git</span>
+                <span class="chip">VS Code</span>
+              </div>
+            </div>
+
+            <div style="flex:1;min-width:260px" class="card">
+              <h3>Soft Skills</h3>
+              <ul style="color:var(--muted)">
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Communication</li>
+                <li>Adaptability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" style="margin-top:28px">
+        <div class="card">
+          <h2>Services</h2>
+          <p style="color:var(--muted)">I offer frontend web design services focused on responsive, mobile-friendly websites using HTML, CSS and JavaScript. I can collaborate on UI/UX, convert designs into functioning webpages, and build interactive components.</p>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" style="margin-top:28px">
+        <h2 style="margin-bottom:12px">Selected Projects</h2>
+        <div class="projects-grid">
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Smart Alarm Clock</h4>
+              <p>IoT-based alert system with sensors and notifications.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Crime Rate Predictor</h4>
+              <p>Data analysis and visualization project.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Personal Budget Tracker</h4>
+              <p>Expense management tool with insights.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Image Gallery</h4>
+              <p>Frontend project using Tkinter for interactive display.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Music Player</h4>
+              <p>Dynamic UI with playback, volume control & lyrics display.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Calculator</h4>
+              <p>Python-based project from internship.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Amazon & Indeed Scrapers</h4>
+              <p>Data extraction tools for job & product listings.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Fake News Detector</h4>
+              <p>Machine learning model for detecting fake news.</p>
+            </div>
+          </a>
+          <a href="https://github.com/SUBASHREE7205" target="_blank" class="proj card">
+            <div>
+              <h4>Boston House Price Predictor</h4>
+              <p>Predictive model using regression techniques.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="margin-top:28px">
+        <div class="card">
+          <h2>Contact</h2>
+          <form action="https://formspree.io/f/mdklydad" method="POST">
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="email" name="email" placeholder="Your email" required />
+  <textarea name="message" rows="5" placeholder="Message" required></textarea>
+  <div style="display:flex;gap:12px;margin-top:8px">
+    <button class="btn btn-primary" type="submit">Send Message</button>
+    <a class="btn btn-ghost" href="/Subashree_Resume.pdf" download>Download Resume</a>
+  </div>
+</form>
+
+
+          <p style="margin-top:12px;color:var(--muted)">📧 subashreeraman57@gmail.com | 📱 +91 9943441031</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Subashree R — Portfolio
+    </footer>
+  </div>
+</body>
+</html>
